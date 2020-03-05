@@ -4,6 +4,11 @@ img{
 	margin-bottom:2em;
 }
 
+video{
+	margin-top:1em;
+	margin-bottom:2em;
+}
+
 .navbar-nav > li{
 	padding-left:3.0em;
 	padding-right:3.0em;

@@ -1,3 +1,73 @@
-<div class="pagetitle">Sign Up</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<p>Sign up below for more information and updates.</p>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="/assets/style.css"/> 
+    <title>Meet Us in the Lounge</title>
+
+    <link rel="shortcut icon" href="/images/couch.jpg" />
+    <meta name="author" content="Jorge Pineda">
+    <meta name="description" content="Our podcast website.">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+    $(function(){
+        /* Load sections into page */
+        $(document).ready(function(){
+            $("#nav").load("/assets/nav.html", function() {
+                /* Dropdown functionality */
+                $(".dropdown").click(
+                    function() {
+                        $(this).siblings('.open').removeClass('open').find('a.dropdown-toggle').attr('data-toggle', 'dropdown');
+                        $(this).find('a.dropdown-toggle').removeAttr('data-toggle');
+                    }
+                );
+                $(".dropdown").hover(
+                    function() {
+                        $(this).addClass("show");
+                        $(this).find(".dropdown-toggle").attr("aria-expanded", "true");
+                        $(this).find(".dropdown-menu").addClass("show");
+                    },
+                    function() {
+                        $(this).removeClass("show");
+                        $(this).find(".dropdown-toggle").attr("aria-expanded", "false");
+                        $(this).find(".dropdown-menu").removeClass("show");
+                    }
+                );
+                /* Navbar fade-in, fade-out effect */
+                $(window).bind('mousewheel', function(event) {
+                    if (event.originalEvent.wheelDelta > 0) {
+                        $('.navbar').fadeIn('fast');
+                    } else {
+                        $('.navbar').fadeOut('fast');
+                    }
+                });
+            });
+            $("#footer").load("/assets/footer.html");
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <!-- Nav -->
+    <div id="nav"></div>
+
+    <!-- Section -->
+    <div class="container">
+        <div class="pagetitle">Sign Up</div>
+
+        <p>Sign up below for more information and updates.</p>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+</body>
+</html> 

@@ -1,4 +1,4 @@
-img{
+img {
 	border-radius:10%;
 	margin-top:1em;
 	margin-bottom:2em;
@@ -9,35 +9,53 @@ video{
 	margin-bottom:2em;
 }
 
-.navbar-nav > li{
-	padding-left:3.0em;
-	padding-right:3.0em;
+#nav {
+	margin-bottom:3.5em;
+}
+@media (min-width: 1200px) {
+	.pr-xl-6 {
+		padding-right: 6rem !important;
+	}
+}
+.dropdown-menu {
+	margin-top: 0;
+}
+.dropdown-toggle::after {
+	transition: transform 0.15s linear; 
+}
+.show.dropdown .dropdown-toggle::after {
+	transform: translateY(3px);
+}
+.navbar-nav > li > .dropdown-menu { 
+	background-color:#292B2C;
+}
+.navbar-nav > li > .dropdown-menu a { 
+	color:#F7F7F7;
+}
+.navbar-nav > li > .dropdown-menu a:hover { 
+	background-color:#0275D8;
 }
 
-.pagetitle{
+.pagetitle {
 	font-size: 3em;
 	padding-top: 0.5em;
 	padding-bottom: 0.4em;
 	text-align: center;
 }
-.pageentry{
+.pageentry {
 	font-size: 1.8em;
 	font-weight: 550;
 }
-.sm-gap{
-	padding-top: 0.5em;
+.gap {
+	padding-top: 2.0em;
 	padding-bottom: 0.1em;
 }
-.lg-gap{
-	padding-top: 1.5em;
-	padding-bottom: 0.1em;
-}
-.no-gap{
+.no-gap {
 	padding-top: 0.2em;
 }
 
 /* For icons. Do not modify. */
-.icon{
+.icon {
 	padding-right: 0.5em;
 	padding-left: 0.5em;
 	display: inline-block;

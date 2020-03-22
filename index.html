@@ -1,104 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
-  <link rel="stylesheet" href="/assets/style.css"/> 
-  <title>Meet Us in the Lounge</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="/assets/style.css"/> 
+    <title>Meet Us in the Lounge</title>
 
-  <link rel="shortcut icon" href="/images/couch.jpg" />
-  <meta name="author" content="Jorge Pineda">
-  <meta name="description" content="Our podcast website.">
+    <link rel="shortcut icon" href="/images/couch.jpg" />
+    <meta name="author" content="Jorge Pineda">
+    <meta name="description" content="Our podcast website.">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-  <script>
-  $(function(){
-    /* Alternate between pages */
-    $(document).ready(function(){
-      $("#section").load("/pages/about.html");
+    <script>
+    $(function(){
+        /* Load sections into page */
+        $(document).ready(function(){
+            $("#nav").load("/assets/nav.html", function() {
+                /* Dropdown functionality */
+                $(".dropdown").click(
+                    function() {
+                        $(this).siblings('.open').removeClass('open').find('a.dropdown-toggle').attr('data-toggle', 'dropdown');
+                        $(this).find('a.dropdown-toggle').removeAttr('data-toggle');
+                    }
+                );
+                $(".dropdown").hover(
+                    function() {
+                        $(this).addClass("show");
+                        $(this).find(".dropdown-toggle").attr("aria-expanded", "true");
+                        $(this).find(".dropdown-menu").addClass("show");
+                    },
+                    function() {
+                        $(this).removeClass("show");
+                        $(this).find(".dropdown-toggle").attr("aria-expanded", "false");
+                        $(this).find(".dropdown-menu").removeClass("show");
+                    }
+                );
+                /* Navbar fade-in, fade-out effect */
+                $(window).bind('mousewheel', function(event) {
+                    if (event.originalEvent.wheelDelta > 0) {
+                        $('.navbar').fadeIn('fast');
+                    } else {
+                        $('.navbar').fadeOut('fast');
+                    }
+                });
+            });
+            $("#footer").load("/assets/footer.html");
+        });
     });
-    $(".p1").click(function() {$("#section").load("/pages/about.html");document.body.scrollTop = 0;document.documentElement.scrollTop = 0;});
-    $(".p2").click(function() {$("#section").load("/pages/episodes.html");document.body.scrollTop = 0;document.documentElement.scrollTop = 0;});
-    $(".p3").click(function() {$("#section").load("/pages/questions.html");document.body.scrollTop = 0;document.documentElement.scrollTop = 0;});
-    $(".p4").click(function() {$("#section").load("/pages/sign_up.html");document.body.scrollTop = 0;document.documentElement.scrollTop = 0;});
-    $(".p5").click(function() {$("#section").load("/pages/team.html");document.body.scrollTop = 0;document.documentElement.scrollTop = 0;});
-
-    /* Navbar fade-in, fade-out effect*/
-    $(window).bind('mousewheel', function(event) {
-      if (event.originalEvent.wheelDelta > 0) {
-        $(".navbar").fadeIn();
-      } else {
-        $(".navbar").fadeOut();
-      }
-    });
-  });
-  </script>
+    </script>
 </head>
 
 <body>
-  <!-- Nav -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-    <a class="navbar-brand">Meet Us in the Lounge</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar" style="padding-right:13em">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link p1" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link p2" href="#" data-toggle="dropdown">Episodes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link p3" href="#" data-toggle="dropdown">Questions</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link p4" href="#" data-toggle="dropdown">Sign Up</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link p5" href="#" data-toggle="dropdown">Team</a>
-        </li>
-      </ul>
-    </div>  
-  </nav>
+    <!-- Nav -->
+    <div id="nav"></div>
 
-  <!-- Section -->
-  <div class="container">
-    <div id="section"></div>
-  </div>
-
-  <!-- Footer -->
-  <div class="jumbotron jumbotron-fluid" style="margin-top:5.0em;margin-bottom:0">
+    <!-- Section -->
     <div class="container">
-      <div class="row" style="font-size:0.8em;margin-bottom:0.5em">
-        <div class="col-12" style="text-align:center">
-          <!-- Add other media
-            <div class="icon"><a href="mailto:jorgepineda140@gmail.com"><i class="svg-icon email"></i></a></div>
-            <div class="icon"><a href=""><i class="svg-icon github"></i></a></div>
-            <div class="icon"><a href=""><i class="svg-icon linkedin"></i></a></div>
-            <div class="icon"><a href=""><i class="svg-icon facebook"></i></a></div>
-          -->
-          <div class="icon"><a href="https://www.instagram.com/meetusinthelounge/"><i class="svg-icon instagram"></i></a></div>    
+        <div class="pagetitle">About</div>
+
+        <div class="row">
+            <div class="col-6 col-md-3 order-md-12 mx-auto">
+                <img class="img-fluid" src="/images/couch.jpg" alt="Couch">
+            </div>
+            <div class="col-md-9">
+                <p> About the podcast. </p>
+            </div>
         </div>
-      </div>
-      <div class="row" style="font-size:0.8em;margin-bottom:2.0em">
-        <div class="col-md-12" style="text-align:center">
-          Made by Jorge Eduardo Pineda.
-        </div>
-      </div>
-      <div class="row" style="font-size:0.8em">
-        <div class="col-md-12" style="text-align:center">
-            Last Updated: March 5, 2020.
-        </div>
-      </div>
     </div>
-  </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
 
 </body>
 </html> 

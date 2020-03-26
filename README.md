@@ -11,3 +11,7 @@ The website for our podcast Meet Us in the Lounge.
     - Started to add some media links, episode and team content.
 * March 24, 2020
     - Minor navbar color change/fix.
+* March 26, 2020
+    - Added Jorge's bio.
+    - Added Episode 1, tinkering with the episode page format.
+    - Added further media links.

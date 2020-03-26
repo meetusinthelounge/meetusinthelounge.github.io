@@ -9,3 +9,5 @@ The website for our podcast Meet Us in the Lounge.
     - Navbar made more reactive to scrolls.
     - Renamed questions page to contact page.
     - Started to add some media links, episode and team content.
+* March 24, 2020
+    - Minor navbar color change/fix.

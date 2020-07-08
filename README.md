@@ -15,3 +15,5 @@ The website for our podcast Meet Us in the Lounge.
     - Added Jorge's bio.
     - Added Episode 1, tinkering with the episode page format.
     - Added further media links.
+* July 7, 2020
+    - Added Episode 2.

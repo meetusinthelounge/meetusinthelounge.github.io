@@ -17,3 +17,6 @@ The website for our podcast Meet Us in the Lounge.
     - Added further media links.
 * July 7, 2020
     - Added Episode 2.
+* November 2, 2020
+    - Added Episodes 3-7.
+    - Added remaining bios.

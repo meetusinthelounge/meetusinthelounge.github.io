@@ -20,3 +20,12 @@ The website for our podcast Meet Us in the Lounge.
 * November 2, 2020
     - Added Episodes 3-7.
     - Added remaining bios.
+* February 21, 2021
+    - Formatting edit to set right margin on paragraphs.
+
+### Contributing:
+When inserting paragraph blocks, set a right margin at index 160 and don't go over. In VSCode, you can do this by modifying `settings.json` to set 
+`"editor.rulers": [160]`.
+
+### Debugging:
+To run an instance of the website locally (which you should always do before pushing changes to git), use `python -m SimpleHTTPServer 8000` and go to url `localhost:8000`.

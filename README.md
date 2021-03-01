@@ -22,6 +22,11 @@ The website for our podcast Meet Us in the Lounge.
     - Added remaining bios.
 * February 21, 2021
     - Formatting edit to set right margin on paragraphs.
+* February 28, 2021
+    - Reordered navbar and removed sign up page.
+    - Removed buzzsprout and email icons.
+    - Added anchor.fm icon.
+    - Reordered episode list.
 
 ### Contributing:
 When inserting paragraph blocks, set a right margin at index 160 and don't go over. In VSCode, you can do this by modifying `settings.json` to set 

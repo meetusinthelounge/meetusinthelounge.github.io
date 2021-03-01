@@ -27,6 +27,7 @@ The website for our podcast Meet Us in the Lounge.
     - Removed buzzsprout and email icons.
     - Added anchor.fm icon.
     - Reordered episode list.
+    - Added latest episodes to front page.
 
 ### Contributing:
 When inserting paragraph blocks, set a right margin at index 160 and don't go over. In VSCode, you can do this by modifying `settings.json` to set 
